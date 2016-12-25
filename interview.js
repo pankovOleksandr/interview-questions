@@ -4,7 +4,7 @@ function test() {
 	console.log(a);
 	console.log(foo());
 
-	var a = 1;
+	var a = 100;
 
 	function foo() {
 		var a = 2;
