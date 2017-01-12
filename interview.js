@@ -38,10 +38,11 @@ var obj = {
 
 var gret = obj.foo;
 
-gret(); // 
+
 obj.foo(); //  
 obj.baa(); //  
 obj.boz() //
+gret(); // 
 
 // QUESTIONS:
 // - say sequence and text of log messages
@@ -77,7 +78,32 @@ var person2 = new Person2('Vasya');
 console.log('person2', person2.getName());
 
 
-// EXECISE 3
+// EXERCISE 4
+
+function Animal(name) {
+  this.name = name
+}
+
+Animal.prototype = {
+  canWalk: true,
+  sit: function() {
+    this.canWalk = false;
+    console.log(this.name + ' sits down.');
+  }
+} 
+
+var petAnimal = new Animal('Pet');
+var wildAnimal = new Animal('Wild');
+
+console.log(petAnimal.canWalk);
+
+petAnimal.sit();
+
+console.log(petAnimal.canWalk);
+console.log(wildAnimal.canWalk);
+
+
+// EXERCISE 5
 // QUESTIONS:
 // -find all errors in the next code
 angular
@@ -120,7 +146,7 @@ console.log(sum(2)(3));  // Outputs 5
 // Write function once
 
 function once(someFunc) {
-	return someFunc
+	
 }
 
 
@@ -147,7 +173,6 @@ var sum = function(a, b) {
 };
 
 var cachedSum = cache(sum);
-
 
 function cache() {
 
